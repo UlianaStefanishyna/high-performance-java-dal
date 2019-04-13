@@ -12,11 +12,18 @@
     <artifactId>jpa-hibernate-exercises</artifactId>
 
     <dependencies>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-jpa</artifactId>
+        </dependency>
+
         <dependency>
             <groupId>org.hibernate.javax.persistence</groupId>
             <artifactId>hibernate-jpa-2.1-api</artifactId>
             <version>1.0.2.Final</version>
         </dependency>
+
         <dependency>
             <groupId>org.hibernate</groupId>
             <artifactId>hibernate-core</artifactId>
@@ -27,6 +34,7 @@
             <groupId>com.high.performance.dal</groupId>
             <artifactId>util-service</artifactId>
         </dependency>
+
     </dependencies>
 
 </project>

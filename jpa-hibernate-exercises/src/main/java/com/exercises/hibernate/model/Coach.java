@@ -2,6 +2,7 @@ package com.exercises.hibernate.model;
 
 import com.exercises.hibernate.model.additional.Level;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import javax.persistence.*;
@@ -9,11 +10,13 @@ import java.util.HashSet;
 import java.util.Set;
 
 import static javax.persistence.EnumType.STRING;
+import static javax.persistence.FetchType.*;
 import static javax.persistence.GenerationType.IDENTITY;
 
 @Getter
 @Setter
 @Entity
+@NoArgsConstructor
 @Table(name = "coach")
 public class Coach {
 
@@ -37,7 +40,7 @@ public class Coach {
     @ManyToMany(mappedBy = "coaches")
     private Set<WorkingDay> workingDays = new HashSet<>();
 
-    @ManyToOne(optional = false)
+    @ManyToOne(optional = false, fetch = LAZY)
     @JoinColumn(name = "gym_id")
     private Gym gym;
 }

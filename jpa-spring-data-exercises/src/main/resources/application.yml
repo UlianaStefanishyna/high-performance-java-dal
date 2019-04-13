@@ -1,0 +1,16 @@
+server:
+  port: 8080
+
+#spring:
+#  datasource:
+#    url:
+#    password:
+#    username:
+
+logging:
+  level:
+    org:
+      springframework:
+        web: DEBUG
+    com:
+      exercises: DEBUG
